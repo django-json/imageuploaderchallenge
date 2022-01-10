@@ -7,7 +7,6 @@
     box-shadow: var(--shadow);
     border-radius: 12px;
     width: 400px;
-    height: auto;
 }
 
 .App__heading {

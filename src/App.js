@@ -6,6 +6,7 @@ import Dropzone from './components/dropzone/dropzone.component';
 import FileUploader from './components/file-uploader/file-uploader.component';
 
 import Loader from './components/loader/loader.component';
+import UploadOverview from './components/upload-overview/upload-overview.component';
 
 function App() {
     return (
@@ -15,9 +16,10 @@ function App() {
             <Dropzone />
             <div className="fs-12 text-grey-3" style={{ marginBottom: '20px' }}>
                 Or
-            </div>
-            <FileUploader /> */}
-            <Loader />
+    </div> */}
+            {/* <FileUploader /> */}
+            {/* <Loader /> */}
+            <UploadOverview />
         </div>
     );
 }

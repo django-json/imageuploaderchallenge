@@ -1,6 +1,6 @@
 import React, { Fragment, useRef } from 'react';
 
-import { Button } from './file-uploader.styles';
+import Button from '../button/button.component';
 
 function FileUploader() {
     const hiddenFileInput = useRef(null);
@@ -16,7 +16,9 @@ function FileUploader() {
 
     return (
         <Fragment>
-            <Button onClick={handleClick}>Choose a file</Button>
+            <Button type="button" onClick={handleClick}>
+                Choose a file
+            </Button>
             <input
                 type="file"
                 ref={hiddenFileInput}
