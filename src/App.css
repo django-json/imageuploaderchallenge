@@ -1,0 +1,26 @@
+.App {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    text-align: center;
+    padding: 30px;
+    background: var(--white-1);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    width: 400px;
+    height: auto;
+}
+
+.App__heading {
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.App__subheading {
+    font-size: 10px;
+    color: var(--grey-1);
+}
+
+.App > .dropzone {
+    margin: 20px 0;
+}
