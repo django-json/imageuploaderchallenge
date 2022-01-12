@@ -31,7 +31,9 @@ export const Container = styled.div`
 
 export const Label = styled.p`
     font-size: 12px;
-    color: var(--grey-3);
+    color: ${(props) => {
+        return props.errors ? '#ff1744' : 'var(--grey-3)';
+    }};
     margin-bottom: 0;
 `;
 

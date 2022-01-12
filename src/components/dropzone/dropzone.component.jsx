@@ -10,7 +10,20 @@ function Dropzone(props) {
         isDragActive,
         isDragAccept,
         isDragReject
-    } = useDropzone({ accept: 'image/*' });
+    } = useDropzone({
+        accept: 'image/*',
+        maxFiles: 1,
+        onDropAccepted: handleDropAccepted,
+        onDropRejected: handleDropRejected
+    });
+
+    function handleDropRejected(file) {
+        props.setErrors(file[0].errors[0]);
+    }
+
+    function handleDropAccepted(file) {
+        props.setUploading(true);
+    }
 
     return (
         <div className="dropzone">

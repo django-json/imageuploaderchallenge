@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 
 import './App.css';
 
@@ -9,17 +9,39 @@ import Loader from './components/loader/loader.component';
 import UploadOverview from './components/upload-overview/upload-overview.component';
 
 function App() {
+    const [errors, setErrors] = useState(null);
+    const [uploading, setUploading] = useState(false);
+    const [uploaded, setUploaded] = useState(false);
+
     return (
         <div className="App">
-            {/* <div className="App__heading">Upload your image</div>
-            <div className="App__subheading">File should be Jpeg, Png, ...</div>
-            <Dropzone />
-            <div className="fs-12 text-grey-3" style={{ marginBottom: '20px' }}>
-                Or
-    </div> */}
-            {/* <FileUploader /> */}
-            {/* <Loader /> */}
-            <UploadOverview />
+            {!uploading && !uploaded && (
+                <Fragment>
+                    <div className="App__heading">Upload your image</div>
+                    <div className="App__subheading">
+                        File should be Jpeg, Png, ...
+                    </div>
+                    <Dropzone
+                        setErrors={setErrors}
+                        setUploading={setUploading}
+                    />
+                    <div
+                        className="fs-12 text-grey-3"
+                        style={{ marginBottom: '20px' }}
+                    >
+                        Or
+                    </div>
+                    <FileUploader
+                        setErrors={setErrors}
+                        setUploading={setUploading}
+                    />
+                    {errors && (
+                        <div className="App__error">{`* ${errors.message}`}</div>
+                    )}
+                </Fragment>
+            )}
+            {uploading && !uploaded && <Loader />}
+            {uploaded && <UploadOverview />}
         </div>
     );
 }
