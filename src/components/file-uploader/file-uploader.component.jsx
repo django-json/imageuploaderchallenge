@@ -2,14 +2,16 @@ import React, { Fragment, useRef } from 'react';
 
 import Button from '../button/button.component';
 
-function FileUploader({ setErrors, setUploading }) {
+import { uploadImage } from '../../utils/utils';
+
+function FileUploader({ setErrors, setUploading, setUploaded, setResult }) {
     const hiddenFileInput = useRef(null);
 
     function handleClick(event) {
         hiddenFileInput.current.click();
     }
 
-    function handleChange(event) {
+    async function handleChange(event) {
         const file = event.target.files[0];
         if (!file.type.includes('image/')) {
             setErrors({
@@ -18,6 +20,12 @@ function FileUploader({ setErrors, setUploading }) {
             });
         } else {
             setUploading(true);
+            const result = await uploadImage(file, 'file');
+            if (result) {
+                setUploading(false);
+                setResult(result);
+                setUploaded(true);
+            }
         }
     }
 

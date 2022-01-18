@@ -1,48 +1,16 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 
-import './App.css';
+import { ImageUploaderContainer } from './App.jsx';
 
-import Dropzone from './components/dropzone/dropzone.component';
-import FileUploader from './components/file-uploader/file-uploader.component';
-
-import Loader from './components/loader/loader.component';
-import UploadOverview from './components/upload-overview/upload-overview.component';
+import ImageUploader from './components/imageuploader/imageuploader.component';
+import Footer from './components/footer/footer.component';
 
 function App() {
-    const [errors, setErrors] = useState(null);
-    const [uploading, setUploading] = useState(false);
-    const [uploaded, setUploaded] = useState(false);
-
     return (
-        <div className="App">
-            {!uploading && !uploaded && (
-                <Fragment>
-                    <div className="App__heading">Upload your image</div>
-                    <div className="App__subheading">
-                        File should be Jpeg, Png, ...
-                    </div>
-                    <Dropzone
-                        setErrors={setErrors}
-                        setUploading={setUploading}
-                    />
-                    <div
-                        className="fs-12 text-grey-3"
-                        style={{ marginBottom: '20px' }}
-                    >
-                        Or
-                    </div>
-                    <FileUploader
-                        setErrors={setErrors}
-                        setUploading={setUploading}
-                    />
-                    {errors && (
-                        <div className="App__error">{`* ${errors.message}`}</div>
-                    )}
-                </Fragment>
-            )}
-            {uploading && !uploaded && <Loader />}
-            {uploaded && <UploadOverview />}
-        </div>
+        <ImageUploaderContainer>
+            <ImageUploader />
+            <Footer />
+        </ImageUploaderContainer>
     );
 }
 
