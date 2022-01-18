@@ -3,6 +3,8 @@ import { useDropzone } from 'react-dropzone';
 
 import { Container, Label, Logo } from './dropzone.styles';
 
+import { uploadImage } from '../../utils/utils';
+
 function Dropzone(props) {
     const {
         getRootProps,
@@ -21,8 +23,14 @@ function Dropzone(props) {
         props.setErrors(file[0].errors[0]);
     }
 
-    function handleDropAccepted(file) {
+    async function handleDropAccepted(file) {
         props.setUploading(true);
+        const result = await uploadImage(file[0], 'file');
+        if (result) {
+            props.setUploading(false);
+            props.setResult(result);
+            props.setUploaded(true);
+        }
     }
 
     return (

@@ -7,16 +7,14 @@ import {
     ImageOverview
 } from './upload-overview.styles';
 
-import Button from '../button/button.component';
-import Input from '../input/input.component';
-import InputGroup from '../input-group/input-group.component';
+import Button from '../../components/button/button.component';
+import Input from '../../components/input/input.component';
+import InputGroup from '../../components/input-group/input-group.component';
 
-function UploadOverview() {
+function UploadOverviewPage(props) {
     function copyToClipboard() {
         /* Copy the text inside the text field */
-        navigator.clipboard.writeText(
-            'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'
-        );
+        navigator.clipboard.writeText(props.result.data.image);
     }
 
     return (
@@ -25,14 +23,14 @@ function UploadOverview() {
             <SuccessLabel>Uploaded Successfully!</SuccessLabel>
             <ImageOverviewContainer>
                 <ImageOverview
-                    src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+                    src={props.result.data.image}
                     alt="Uploaded File Overview"
                 />
             </ImageOverviewContainer>
             <InputGroup>
                 <Input
                     type="text"
-                    value="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+                    value={props.result.data.image}
                     onChange={() => {}}
                 />
                 <Button type="button" onClick={copyToClipboard}>
@@ -43,4 +41,4 @@ function UploadOverview() {
     );
 }
 
-export default UploadOverview;
+export default UploadOverviewPage;
