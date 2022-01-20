@@ -60,11 +60,7 @@ Backend:
 -   [Datauri](https://www.npmjs.com/package/datauri)
 -   [Multer](https://www.npmjs.com/package/multer)
 
-<<<<<<< HEAD
-P.S. You can find the backend server in another repository and the way to install and run it.
-=======
 P.S. You can find the backend server in another repository.
->>>>>>> 7f53c7bbaa4b3bb31013c9eecc6395a49eddcd63
 
 ## Features
 
