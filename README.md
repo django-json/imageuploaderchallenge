@@ -8,7 +8,11 @@
 
 <div align="center">
   <h3>
+<<<<<<< HEAD
     <a href="https://imageuploaderchallenge">
+=======
+    <a href="https://imageuploaderchallenge.netlify.app">
+>>>>>>> 7f53c7bbaa4b3bb31013c9eecc6395a49eddcd63
       Demo
     </a>
     <span> | </span>
@@ -60,7 +64,11 @@ Backend:
 -   [Datauri](https://www.npmjs.com/package/datauri)
 -   [Multer](https://www.npmjs.com/package/multer)
 
+<<<<<<< HEAD
 P.S. You can find the backend server in another repository and the way to install and run it.
+=======
+P.S. You can find the backend server in another repository.
+>>>>>>> 7f53c7bbaa4b3bb31013c9eecc6395a49eddcd63
 
 ## Features
 
