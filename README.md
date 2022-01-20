@@ -8,11 +8,7 @@
 
 <div align="center">
   <h3>
-<<<<<<< HEAD
-    <a href="https://imageuploaderchallenge">
-=======
     <a href="https://imageuploaderchallenge.netlify.app">
->>>>>>> 7f53c7bbaa4b3bb31013c9eecc6395a49eddcd63
       Demo
     </a>
     <span> | </span>
@@ -64,11 +60,7 @@ Backend:
 -   [Datauri](https://www.npmjs.com/package/datauri)
 -   [Multer](https://www.npmjs.com/package/multer)
 
-<<<<<<< HEAD
-P.S. You can find the backend server in another repository and the way to install and run it.
-=======
 P.S. You can find the backend server in another repository.
->>>>>>> 7f53c7bbaa4b3bb31013c9eecc6395a49eddcd63
 
 ## Features
 
@@ -106,6 +98,7 @@ $ npm start
 -   [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 -   [Node.js](https://nodejs.org/)
 -   [Uploading Images to Cloudinary Using Multer and ExpressJS](https://medium.com/@joeokpus/uploading-images-to-cloudinary-using-multer-and-expressjs-f0b9a4e14c54)
+-   [How to deploy an Express API to Vercel](https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel)
 
 ## Contact
 
