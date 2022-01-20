@@ -10,7 +10,7 @@ export function uploadImage(file, fieldName) {
 
     formData.append(fieldName, file);
 
-    return fetch('imageuploaderchallenge-api.vercel.app/uploads', {
+    return fetch('https://imageuploaderchallenge-api.vercel.app/uploads', {
         method: 'POST',
         body: formData
     })
