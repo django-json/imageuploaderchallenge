@@ -62,7 +62,7 @@ Backend:
 -   [Helmet](https://www.npmjs.com/package/helmet)
 -   [Compression](https://www.npmjs.com/package/compression)
 
-P.S. You can find the backend server in another repository.
+P.S. You can find the backend server [here](https://github.com/django-json/imageuploaderchallenge-api/).
 
 ## Features
 
