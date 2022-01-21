@@ -25,12 +25,12 @@ function Dropzone(props) {
 
     async function handleDropAccepted(file) {
         props.setUploading(true);
-        const result = await uploadImage(file[0], 'file');
-        if (result) {
-            props.setUploading(false);
-            props.setResult(result);
-            props.setUploaded(true);
-        }
+        // const result = await uploadImage(file[0], 'file');
+        // if (result) {
+        //     props.setUploading(false);
+        //     props.setResult(result);
+        //     props.setUploaded(true);
+        // }
     }
 
     return (
