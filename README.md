@@ -59,6 +59,8 @@ Backend:
 -   [Cloudinary](https://www.npmjs.com/package/cloudinary)
 -   [Datauri](https://www.npmjs.com/package/datauri)
 -   [Multer](https://www.npmjs.com/package/multer)
+-   [Helmet](https://www.npmjs.com/package/helmet)
+-   [Compression](https://www.npmjs.com/package/compression)
 
 P.S. You can find the backend server in another repository.
 
